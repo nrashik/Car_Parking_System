@@ -29,11 +29,18 @@
 
   <br>
   <div class="form-group">
+    <label for="exampleInputEmail1">Address</label>
+    <input name="address" type="string" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Contact Number">
+    
+  </div>
+
+
+  <br>
+  <div class="form-group">
     <label for="exampleInputEmail1">Contact Number</label>
     <input name="phone" type="string" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Contact Number">
     
   </div>
-
 
 
   <button type="submit" class="btn btn-primary">Submit</button>

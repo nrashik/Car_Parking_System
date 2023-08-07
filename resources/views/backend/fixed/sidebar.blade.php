@@ -9,23 +9,33 @@
                                 Dasboard
                             </a>
 
-                            <a class="nav-link" href="{{route('slot')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Slots
-                            </a>
-
-                          
+                    
                             
                             <a class="nav-link" href="{{route('categorey.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Categories
+                                categorey
+                            </a>
+
+
+
+                            <a class="nav-link" href="{{route('customer.list')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Customers
+                            </a>
+
+
+
+
+                            <a class="nav-link" href="{{route('area.list')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Parking Area
                             </a>
 
 
 
                             <a class="nav-link" href="{{route('vehicle.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Vehicles
+                                Parking location
                             </a>
 
 

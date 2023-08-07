@@ -26,10 +26,31 @@ public function store(Request $request)
             'name'=>$request->name,
             'password'=>bcrypt($request->password),
             'email'=>$request->email,
+            'address'=>$request->address,
+            'phone'=>$request->phone,
         ]);
 
 return redirect()->route('home')->with('msg','Registration success.');
 
+    }
+
+    public function dologin(Request $request)
+    {
+        $request->validate
+        ([
+            'email'     =>'required|email',
+            'password'  =>'required|min:6'
+        ]);
+
+        //dd($request->all());
+
+        $credential=$request->except('_token');
+    }
+
+    public function customerList()
+    {
+        $customers=Customer::all();
+        return view('backend.pages.customer.list',compact('customers'));
     }
 
 }

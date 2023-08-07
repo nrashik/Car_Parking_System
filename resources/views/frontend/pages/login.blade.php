@@ -4,7 +4,9 @@
 
 <h1>Customer Login</h1>
 
-<form>
+<form action="{{route('customer.login')}}" method="post">
+  @csrf
+  
     <br>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
@@ -19,6 +21,11 @@
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
+  
+  <p>Don't have account ? <a href="{{route('customer.registration')}}">Register</a></p>
+  <!-- <a type="submit" class="btn btn-primary" herf="{{route('customer.registration')}}">Register?</a> -->
 </form>
+
+
 
 @endsection

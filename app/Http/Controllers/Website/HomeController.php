@@ -16,4 +16,9 @@ class HomeController extends Controller
     {
        return view('frontend.pages.login');
     }
+
+    public function search()
+    {
+        return view('');
+    }
 }
