@@ -4,6 +4,13 @@
 
 <h1>New Parking Location</h1>
 
+
+<div class="containere">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <div class="card p-3 mt-3">
+                <div class="card-header">
+                    <div class="card-body">
 <form action="{{route('area.store')}}" method="post" enctype="multipart/form-data">
     @csrf
   <div class="form-group">
@@ -28,5 +35,11 @@
 <br>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @endsection

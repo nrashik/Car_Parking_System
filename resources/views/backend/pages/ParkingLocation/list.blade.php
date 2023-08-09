@@ -1,1 +1,34 @@
 @extends('backend.master')
+
+@section('content')
+<h1>Parking location<a class="btn btn-primary" href="{{route('location.add')}}">Add New Location</a></h1>
+
+<table class="table">
+
+  <thead>
+    <tr>
+      <th scope="col">SL</th>
+      <th scope="col">Area</th>
+      <th scope="col">Loaction Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">CC Camera</th>
+      <th scope="col">Guard</th>
+      <th scope="col">Action</th>
+    </tr>
+</thead>
+  <tbody>
+    @foreach($locations as $locat)
+    <tr>
+        <th scope="row">{{$loop->iteration}}</th>
+        <td>{{$locat->areaShow->area_name}}</td>
+         <td>{{$locat->location}}</td>
+         <td>{{$locat->address}}</td>
+         <td>{{$locat->cc_camera}}</td>
+         <td>{{$locat->guard}}</td>
+           
+    @endforeach
+
+  </tbody>
+</table>
+
+@endsection

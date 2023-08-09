@@ -64,7 +64,7 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
                             <a href="index.html" class="nav-item nav-link active"href="{{route('home')}}">Home</a>
-                            <a href="about.html" class="nav-item nav-link">Our Solution</a>
+                            <a href="about.html" class="nav-item nav-link">About Us</a>
                             <a href="service.html" class="nav-item nav-link">Find Parking</a>
 
                             <div class="nav-item dropdown">
@@ -78,6 +78,7 @@
                             </div>
                             <a href="contact.html" class="nav-item nav-link">Request Parking?</a>
                         </div>
+
                         <div class="ml-auto">
                             <a class="btn btn-custom" href="{{route('customer.login')}}">Login/Register</a>
                         </div>

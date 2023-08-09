@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SlotControlller;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoreyController;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\Website\HomeController;
 use App\Http\Controllers\Website\CustomerController;
@@ -64,4 +65,10 @@ Route::get('/ParkingArea_list',[AreaController::class,'list'])->name('area.list'
 Route::get('/new_area',[AreaController::class,'add'])->name('add.area');
 Route::post('/store_area',[AreaController::class,'store'])->name('area.store');
 
-Route::get('/ParkingArea_Location',[VehicleController::class,'vehicle'])->name('vehicle.list');
+
+Route::get('/location_list',[LocationController::class,'list'])->name('location.list');
+Route::get('/add_location',[LocationController::class,'add'])->name('location.add');
+Route::post('/store_location',[LocationController::class,'store'])->name('location.store');
+
+
+Route::get('/vehicle',[VehicleController::class,'vehicle'])->name('vehicle.list');

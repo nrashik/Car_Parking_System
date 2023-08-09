@@ -33,7 +33,7 @@
 
 
 
-                            <a class="nav-link" href="{{route('vehicle.list')}}">
+                            <a class="nav-link" href="{{route('location.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Parking location
                             </a>

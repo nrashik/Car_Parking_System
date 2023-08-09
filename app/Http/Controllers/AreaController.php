@@ -10,14 +10,17 @@ class AreaController extends Controller
     public function list()
     {
         //@dd('habijhabi');
-        $areas=Area::all();
+        $areas=Area::all()::with('areaShow')->all();
         return view('backend.pages.ParkingArea.list',compact('areas'));
     }
 
     public function add()
     {
        //dd('habijhabi');
-        return view('backend.pages.area.add');
+        return view('backend.pages.ParkingArea.add');
+        $areas=Area::all();
+
+        return view('backend.pages.ParkingArea.add',compact('ares'));
     }
 
     public function store(Request $request)
