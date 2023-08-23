@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Area;
 use App\Models\Category;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -27,5 +28,9 @@ class AppServiceProvider extends ServiceProvider
     {
         $all_category=Category::all();
         View::share('category',$all_category);
+
+        $areas=Area::all();
+        view::share('area',$areas);
+
     }
 }

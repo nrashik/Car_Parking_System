@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
-use App\Models\Customer;
+
 use Illuminate\Http\Request;
+use App\Models\Customer;
 
 class CustomerController extends Controller
 {
@@ -52,5 +53,12 @@ return redirect()->route('home')->with('msg','Registration success.');
         $customers=Customer::all();
         return view('backend.pages.customer.list',compact('customers'));
     }
+
+        public function logout()
+        {
+            auth()->guard('web')->logout();
+            return redirect()->route('homepage');
+        }
+    
 
 }

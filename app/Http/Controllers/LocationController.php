@@ -10,7 +10,7 @@ class LocationController extends Controller
 {
     public function list()
     {
-        $locations=Locations::with('areaShow')->get();
+        $locations=Locations::with('areashow')->get();
         return view('backend.pages.ParkingLocation.list',compact('locations'));
     }
 
@@ -33,6 +33,15 @@ class LocationController extends Controller
         ]);
        
         return redirect()->back()->with('msg','New location added Successfully');
+    }
+
+    public function areaWiseLocations($id)
+    {
+
+        $locations=Locations::where('area_id',$id)->get();
+        // // dd($id);
+        // $area=Locations::where('area_id',$id)->get();
+        return view('frontend.pages.Booking.area-location',compact('locations'));
     }
 
 }

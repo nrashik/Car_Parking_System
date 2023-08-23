@@ -5,13 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Area extends Model
+class Reviews extends Model
 {
     use HasFactory;
     protected $guarded=[];
-
-    public function area_show()
-    {
-        return $this->hasMany(locations::class);
-    }
 }

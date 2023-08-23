@@ -188,7 +188,9 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="price-item">
+
+
+                        <!-- <div class="price-item">
                             <div class="price-header">
                                 <h3>Basic Parking</h3>
                                 <h2><span>$</span><strong>25</strong><span>.99</span></h2>
@@ -201,46 +203,38 @@
                             <div class="price-footer">
                                 <a class="btn btn-custom" href="">Book Now</a>
                             </div>
-                        </div>
+                        </div> -->       
                     </div>
+
+
+                    
                     <div class="col-md-4">
                         <div class="price-item featured-item">
                             <div class="price-header">
-                                <h3>Premium Parking</h3>
-                                <h2><span>$</span><strong>35</strong><span>.99</span></h2>
+                                <h3>Parking Areas</h3>
+                                <h2><span>BDT</span><strong>35</strong></h2> 
                             </div>
                             <div class="price-body">
-                                <ul>
-                                    <li><i class="far fa-check-circle"></i>Parking</li>
-                                    <li><i class="far fa-check-circle"></i>CCTV Coverage</li>
-                                    <li><i class="far fa-check-circle"></i>Always Guard Available</li>
-                                    <li><i class="far fa-check-circle"></i>Vehicle Wash</li>
-                                    <li><i class="far fa-check-circle"></i>Basic Servicing</li>
+                                <ul> 
+                                    <li><i class="far fa-check-circle"></i>Area: </li>
+                                    <li><i class="far fa-check-circle"></i>Location Nmae:</li>
+                                    <li><i class="far fa-check-circle"></i>Address: </li>
+                                    <li><i class="far fa-check-circle"></i>CC Camera: </li>
+                                    <li><i class="far fa-check-circle"></i>Guard: </li>
                                 </ul>
                             </div>
                             <div class="price-footer">
-                                <a class="btn btn-custom" href="">Book Now</a>
+                                <a class="btn btn-custom" href="{{route('booking')}}">Book Now</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="price-item">
-                            <div class="price-header">
-                                <h3>Complex Parking</h3>
-                                <h2><span>$</span><strong>49</strong><span>.99</span></h2>
-                            </div>
-                            <div class="price-body">
-                                <ul>
-                                <li><i class="far fa-check-circle"></i>Parking</li>
-                                <li><i class="far fa-check-circle"></i>CCTV Coverage</li>
-                                    <li><i class="far fa-check-circle"></i>Always Guard Available</li>
-                                </ul>
-                            </div>
-                            <div class="price-footer">
-                                <a class="btn btn-custom" href="">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
+
+                    
+
+
+                    
+
+
                 </div>
             </div>
         </div>
@@ -301,19 +295,20 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="location-form">
-                            <h3>Request for a Parking</h3>
-                            <form>
+                            <h3>How was your Experience?</h3>
+                            <form action="{{route('review.store')}}" method="post">
+                                @csrf
                                 <div class="control-group">
-                                    <input type="text" class="form-control" placeholder="Name" required="required" />
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required="required" />
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" placeholder="Email" required="required" />
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required="required" />
                                 </div>
                                 <div class="control-group">
-                                    <textarea class="form-control" placeholder="Description" required="required"></textarea>
+                                    <textarea class="form-control" name="review" placeholder="Your words here..." required="required"></textarea>
                                 </div>
                                 <div>
-                                    <button class="btn btn-custom" type="submit">Send Request</button>
+                                    <button class="btn btn-custom" type="submit">Send Review</button>
                                 </div>
                             </form>
                         </div>

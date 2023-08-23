@@ -10,7 +10,7 @@ class AreaController extends Controller
     public function list()
     {
         //@dd('habijhabi');
-        $areas=Area::all()::with('areaShow')->all();
+        $areas=Area::all();
         return view('backend.pages.ParkingArea.list',compact('areas'));
     }
 
@@ -35,4 +35,11 @@ class AreaController extends Controller
         return redirect()->back()->with('msg','New Area Added Successfuly!');
 
     }
+
+
+ 
+
+
+
+
 }

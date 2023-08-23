@@ -63,24 +63,24 @@
 
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
-                            <a href="index.html" class="nav-item nav-link active"href="{{route('home')}}">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About Us</a>
-                            <a href="service.html" class="nav-item nav-link">Find Parking</a>
+                            <a class="nav-item nav-link active"href="{{route('homepage')}}">Home</a>
+                            <a href="{{route('contactUs')}}" class="nav-item nav-link">Contact Us</a>
+                            <a href=""class="nav-item nav-link">Find Parking</a>
 
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Parking Areas</a>
                                 <div class="dropdown-menu">
-                                    <a href="blog.html" class="dropdown-item">Uttara</a>
-                                    <a href="single.html" class="dropdown-item">Shahbag</a>
-                                    <a href="team.html" class="dropdown-item">Mohakhali</a>
-                                    <a href="booking.html" class="dropdown-item">Firmgate</a>
+                                    @foreach($area as $ar)
+                                    <a href="{{Route('area.location',$ar->id)}}" class="dropdown-item">{{$ar->area_name}}</a>
+                                   @endforeach
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Request Parking?</a>
+                            <a href="{{route('all.location')}}" class="nav-item nav-link">Parking Locations </a>
                         </div>
 
-                        <div class="ml-auto">
-                            <a class="btn btn-custom" href="{{route('customer.login')}}">Login/Register</a>
+                        <div class="nav-item dropdown">
+                            <a class="btn btn-custom" href="{{route('customer.login')}}">Login</a>
+                            <a class="btn btn-custom" href="{{route('customer.logout')}}">Logout</a>
                         </div>
                     </div>
                 </nav>

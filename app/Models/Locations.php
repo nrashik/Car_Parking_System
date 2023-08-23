@@ -14,4 +14,9 @@ class Locations extends Model
     {
         return $this->belongsTo(Area::class,'area_id','id');
     }
+
+    public function area_show()
+    {
+        return $this->hasMany(Locations::class);
+    }
 }
