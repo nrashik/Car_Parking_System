@@ -35,6 +35,12 @@ return redirect()->route('home')->with('msg','Registration success.');
 
     }
 
+
+    public function login()
+    {
+       return view('frontend.pages.login');
+    }
+
     public function dologin(Request $request)
     {
         $request->validate

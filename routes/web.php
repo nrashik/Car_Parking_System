@@ -30,7 +30,7 @@ use App\Http\Controllers\WebsiteLocationController;
 //....................................Website Panel Routes................................................................
 
 Route::get('/SmartParking',[HomeController::class,'home'])->name('homepage');
-Route::get('/customer-login',[HomeController::class,'login'])->name('customer.login');
+Route::get('/customer-login',[CustomerController::class,'login'])->name('customer.login');
 
 
 
@@ -57,12 +57,12 @@ Route::post('/review',[ReviewController::class,'review'])->name('review.store');
 
 
 //.......................................Middlewear for Booking...........................................
-// Route::group(['middleware'=>'FrontendAuthentication'],function(){
+Route::group(['middleware'=>'FrontendAuthentication'],function(){
 
 Route::get('/customer-logout',[CustomerController::class,'logout'])->name('customer.logout');
 Route::get('/booking-form',[BookingController::class,'booking'])->name('booking');
 
-// });
+});
 
 
 
@@ -79,14 +79,19 @@ Route::post('/booking-store',[BookingController::class,'store'])->name('booking.
 
 //................................Admin Panel Routes.................................................................
 
-Route::get('/',[DashboardController::class,'dashboard'])->name('dashboard');
-Route::get('/slot',[SlotControlller::class,'slot'])->name('slot');
-
-
-
+Route::group(['prefix'=>'admin'],function(){
 
 Route::get('/admin/login',[UserLoginController::class,'login'])->name('user.login');
-Route::get('/admin/dologin',[UserLoginController::class.'dologin'])->name('user.dologin');
+Route::post('/admin/dologin',[UserLoginController::class,'dologin'])->name('dologin');
+
+
+Route::group(['middleware'=>'auth'],function(){
+
+Route::get('/logout',[UserLoginController::class,'logout'])->name('user.logout');
+
+
+Route::get('/',[DashboardController::class,'dashboard'])->name('dashboard');
+Route::get('/slot',[SlotControlller::class,'slot'])->name('slot');
 
 
 
@@ -106,3 +111,9 @@ Route::post('/store_location',[LocationController::class,'store'])->name('locati
 
 
 Route::get('/vehicle',[VehicleController::class,'vehicle'])->name('vehicle.list');
+
+
+});
+
+
+});

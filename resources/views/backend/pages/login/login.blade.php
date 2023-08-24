@@ -20,23 +20,24 @@
 
     <div class="content"> 
 
-     <h2>Sign In</h2> 
+     <h2>Admin Login</h2> 
+<form action="{{route('dologin')}}" method="post">
 
-     <div class="form"> 
-
+<div class="form" >
+      @csrf
       <div class="inputBox"> 
 
-       <input type="text" required> <i>Username</i> 
+       <input type="text" name="name" required> <i>Username</i> 
 
       </div> 
 
       <div class="inputBox"> 
 
-       <input type="password" required> <i>Password</i> 
+       <input type="password" name="password" required> <i>Password</i> 
 
       </div> 
 
-      <div class="links"> <a href="#">Forgot Password</a> <a href="#">Signup</a> 
+      <div class="links"> <a href="#"></a> <a href="#"></a> 
 
       </div> 
 
@@ -57,6 +58,9 @@
  </body>
 
 </html>
+
+</form>
+   
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');

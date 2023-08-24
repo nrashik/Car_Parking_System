@@ -68,7 +68,7 @@
             <div class="container">
                 <div class="section-header text-center">
                     <p>What We Do?</p>
-                    <h2> Parking Services</h2>
+                    <h2> How you are Benifited?</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
@@ -184,7 +184,7 @@
             <div class="container">
                 <div class="section-header text-center">
                     <p>Parking Plan</p>
-                    <h2>Choose Your Plan</h2>
+                    <h2>Give Your First Booking Here!</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
@@ -212,15 +212,15 @@
                         <div class="price-item featured-item">
                             <div class="price-header">
                                 <h3>Parking Areas</h3>
-                                <h2><span>BDT</span><strong>35</strong></h2> 
+                                <h2><span>BDT</span><strong>50</strong></h2> 
                             </div>
                             <div class="price-body">
                                 <ul> 
-                                    <li><i class="far fa-check-circle"></i>Area: </li>
-                                    <li><i class="far fa-check-circle"></i>Location Nmae:</li>
-                                    <li><i class="far fa-check-circle"></i>Address: </li>
-                                    <li><i class="far fa-check-circle"></i>CC Camera: </li>
-                                    <li><i class="far fa-check-circle"></i>Guard: </li>
+                                    <li><i class="far fa-check-circle"></i>Proper Security</li>
+                                    <li><i class="far fa-check-circle"></i>Easy Access</li>
+                                    <li><i class="far fa-check-circle"></i>24/7 Open </li>
+                                    <li><i class="far fa-check-circle"></i>CC Camera: Available </li>
+                                    <li><i class="far fa-check-circle"></i>Guard: Available</li>
                                 </ul>
                             </div>
                             <div class="price-footer">
@@ -247,8 +247,8 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="section-header text-left">
-                            <p>Parking Spots</p>
-                            <h2>Car Parking & Care Points</h2>
+                            <p>Parking Locations</p>
+                            <h2>Premium Parking and Care Points</h2>
                         </div>
                         <div class="row">
                             <div class="col-md-6">

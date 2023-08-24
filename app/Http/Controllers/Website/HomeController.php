@@ -13,10 +13,6 @@ class HomeController extends Controller
         return view('frontend.pages.home');
     }
 
-    public function login()
-    {
-       return view('frontend.pages.login');
-    }
 
     public function search()
     {
