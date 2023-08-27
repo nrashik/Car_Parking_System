@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class UserLoginController extends Controller
@@ -13,7 +14,8 @@ class UserLoginController extends Controller
 
     public function dologin(Request $request)
     {
-       $credentials=$request->only(['name','password']);
+        // dd($request->all());
+       $credentials=$request->only(['email','password']);
 
         if(auth()->attempt($credentials))
 

@@ -13,6 +13,8 @@
       <th scope="col">Address</th>
       <th scope="col">CC Camera</th>
       <th scope="col">Guard</th>
+      <th scope="col">No of Slots</th>
+      <th scope="col">Image</th>
       <th scope="col">Action</th>
     </tr>
 </thead>
@@ -25,6 +27,11 @@
          <td>{{$locat->address}}</td>
          <td>{{$locat->cc_camera}}</td>
          <td>{{$locat->guard}}</td>
+         <td>{{$locat->slot}}</td>
+         <td>
+          <img src="{{url('/uploads/location/' .$locat->image)}}"style="width: 60px;" alt="">
+         </td>
+         
            
     @endforeach
 

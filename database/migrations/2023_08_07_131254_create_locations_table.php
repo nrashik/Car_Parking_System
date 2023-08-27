@@ -29,6 +29,8 @@ class CreateLocationsTable extends Migration
             $table->string('address');
             $table->string('cc_camera');
             $table->string('guard');
+            $table->string('slot');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

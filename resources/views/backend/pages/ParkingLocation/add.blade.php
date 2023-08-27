@@ -8,7 +8,7 @@
             <div class="card p-3 mt-3">
                 <div class="card-header">
                     <div class="card-body">
-                    <form href="" action="{{route('location.store')}}" method="post">
+                    <form href="" action="{{route('location.store')}}" method="post" enctype="multipart/form-data"> 
                       @csrf
                       <div class="form-group">
                         <label for="exampleInputEmail1">Area</label>
@@ -38,6 +38,16 @@
                       <div class="form-group">
                         <label for="exampleInputEmail1">Guard</label>
                         <input type="text" name='guard' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Availability">
+                      </div><br>
+
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Slot</label>
+                        <input type="number" name='slot' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Availability">
+                      </div><br>
+
+                      <div class="form-group">
+                        <label for="image">Image</label>
+                        <input type="file" name='image' class="form-control" id="image" aria-describedby="emailHelp" placeholder="Enter Availability">
                       </div><br>
 
 

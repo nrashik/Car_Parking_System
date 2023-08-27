@@ -81,6 +81,7 @@
                         <div class="nav-item dropdown">
                             <a class="btn btn-custom" href="{{route('customer.login')}}">Login</a>
                             <a class="btn btn-custom" href="{{route('customer.logout')}}">Logout</a>
+                            <a class="btn btn-custom" href="{{route('profile')}}">profile</a>
                         </div>
                     </div>
                 </nav>

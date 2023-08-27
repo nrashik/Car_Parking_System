@@ -15,7 +15,7 @@ class FrontendAuthentication
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(auth('web')->user())
+        if(auth('customer')->user())
         {
             return $next($request);
         }

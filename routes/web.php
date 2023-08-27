@@ -8,6 +8,7 @@ use App\Http\Controllers\SlotControlller;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoreyController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\Website\HomeController;
@@ -40,12 +41,17 @@ Route::get('/all-locations',[HomeController::class,'allLocation'])->name('all.lo
 Route::get('/search',[HomeController::class,'search'])->name('search');
 
 
+Route::get('/customer-profile',[ProfileController::class,'profile'])->name('profile');
+
+
 Route::get('/Contact-Us',[HomeController::class,'contact'])->name('contactUs');
 
 
 Route::get('/customer-registration',[CustomerController::class,'registration'])->name('customer.registration');
 Route::post('/customer-store',[CustomerController::class,'store'])->name('customer.store');
-Route::post('/customer-login',[CustomerController::class,'dologin'])->name('customer.login');
+
+
+Route::post('/customer-ddologin',[CustomerController::class,'dologin'])->name('customer.dologin');
 
 
 
@@ -57,7 +63,7 @@ Route::post('/review',[ReviewController::class,'review'])->name('review.store');
 
 
 //.......................................Middlewear for Booking...........................................
-Route::group(['middleware'=>'FrontendAuthentication'],function(){
+Route::group(['middleware'=>'frontendAuth'],function(){
 
 Route::get('/customer-logout',[CustomerController::class,'logout'])->name('customer.logout');
 Route::get('/booking-form',[BookingController::class,'booking'])->name('booking');

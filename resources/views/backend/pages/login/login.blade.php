@@ -21,13 +21,13 @@
     <div class="content"> 
 
      <h2>Admin Login</h2> 
-<form action="{{route('dologin')}}" method="post">
+<form action="{{Route('dologin')}}" method="post">
 
 <div class="form" >
       @csrf
       <div class="inputBox"> 
 
-       <input type="text" name="name" required> <i>Username</i> 
+       <input type="email" name="email" required> <i>Email</i> 
 
       </div> 
 

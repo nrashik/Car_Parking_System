@@ -31,7 +31,7 @@ public function store(Request $request)
             'phone'=>$request->phone,
         ]);
 
-return redirect()->route('home')->with('msg','Registration success.');
+return redirect()->route('homepage')->with('msg','Registration success.');
 
     }
 
@@ -43,15 +43,23 @@ return redirect()->route('home')->with('msg','Registration success.');
 
     public function dologin(Request $request)
     {
+        // dd($request>);
         $request->validate
         ([
             'email'     =>'required|email',
             'password'  =>'required|min:6'
         ]);
 
-        //dd($request->all());
+        // dd($request->all());
 
         $credential=$request->except('_token');
+
+        if(auth()->guard('customer')->attempt($credential)){
+            return redirect()->route('booking');
+        }else{
+            return redirect()->route('dashboard');
+        }
+
     }
 
     public function customerList()
@@ -62,7 +70,7 @@ return redirect()->route('home')->with('msg','Registration success.');
 
         public function logout()
         {
-            auth()->guard('web')->logout();
+            auth()->guard('customer')->logout();
             return redirect()->route('homepage');
         }
     
