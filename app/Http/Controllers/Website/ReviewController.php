@@ -18,4 +18,17 @@ class ReviewController extends Controller
        ]);
         return redirect()->back()->with('msg','Review Submitted Successfully');
     }
+
+    public function list()
+    {
+        $reviews=Reviews::all();
+        return view('backend.pages.review.reviewList',compact('reviews'));
+    }
+
+    public function delete($id)
+    {
+        $review=Reviews::find($id);
+        $review->delete();
+        return redirect()->back()->with('msg','Review Deleted Successfylly.');
+    }
 }

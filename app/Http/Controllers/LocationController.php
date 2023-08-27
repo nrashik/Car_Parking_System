@@ -56,4 +56,44 @@ class LocationController extends Controller
         return view('frontend.pages.Booking.area-location',compact('locations'));
     }
 
+    public function edit($id)
+    {
+        $locations=Locations::find($id);
+        return view('backend.pages.ParkingLocation.edit',compact('locations'));
+    }
+
+
+    public function update(Request $request ,$id)
+    {
+      
+        // if($request->hasFile('image'))
+        // {
+        //     $image=$request->file('image');
+        //     $fileName=date('Ymdhsi').'.'.$image->getClientOriginalExtension();
+        //     $image->storeAs('/location',$fileName);
+        // }
+        $locations=Locations::find($id);
+        
+        $locations->update
+        ([
+            'area_id'=>$request->area,
+            'location'=>$request->location,
+            'address'=>$request->address,
+            'cc_camera'=>$request->cc_camera,
+            'guard'=>$request->guard,
+            'slot'=>$request->slot
+
+
+        ]);
+       
+        return redirect()->back()->with('msg','New location added Successfully');
+    }
+    public function delete($id)
+    {
+        $location=Locations::find($id);
+        $location->delete();
+        return redirect()->back()->with('msg','Delete uccessfylly.');
+    }
+
+
 }

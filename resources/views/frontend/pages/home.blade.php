@@ -224,7 +224,7 @@
                                 </ul>
                             </div>
                             <div class="price-footer">
-                                <a class="btn btn-custom" href="{{route('booking')}}">Book Now</a>
+                                <a class="btn btn-custom" href="">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -296,7 +296,7 @@
                     <div class="col-lg-5">
                         <div class="location-form">
                             <h3>How was your Experience?</h3>
-                            <form action="{{route('review.store')}}" method="post">
+                            <form action="{{route('review.list')}}" method="post">
                                 @csrf
                                 <div class="control-group">
                                     <input type="text" name="name" class="form-control" placeholder="Name" required="required" />

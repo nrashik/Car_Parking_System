@@ -41,7 +41,7 @@
 
 
 
-                            <a class="nav-link" href="{{route('location.list')}}">
+                            <a class="nav-link" href="{{route('booking.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Bookings
                             </a>
@@ -50,7 +50,7 @@
 
 
                             
-                            <a class="nav-link" href="{{route('location.list')}}">
+                            <a class="nav-link" href="{{route('report')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Report
                             </a>
@@ -58,9 +58,9 @@
 
 
 
-                            <a class="nav-link" href="{{route('location.list')}}">
+                            <a class="nav-link" href="{{route('contactUs.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Transaction History
+                                Contact Requests
                             </a>
 
 

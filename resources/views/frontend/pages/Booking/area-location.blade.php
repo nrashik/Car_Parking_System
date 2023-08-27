@@ -6,7 +6,7 @@
 @foreach($locations as $location)
 
 <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
+  <img class="card-img-top" src="{{url('/uploads/location/' .$location->image)}}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{$location->location}}</h5>
     <p class="card-text"></p>
@@ -17,7 +17,7 @@
                                     <li><i class="far fa-check-circle"></i>CC Camera: {{$location->cc_camera}}</li>
                                     <li><i class="far fa-check-circle"></i>Guard: {{$location->guard}}</li>
                                 </ul>
-                                <a href="#" class="btn btn-success">Book Now</a>
+                                <a href="{{Route('booking',$location->id)}}" class="btn btn-success">Book Now</a>
   </div>
 </div>
 @endforeach

@@ -31,6 +31,11 @@
          <td>
           <img src="{{url('/uploads/location/' .$locat->image)}}"style="width: 60px;" alt="">
          </td>
+         <td>
+         <a class="btn btn-primary" href="{{Route('location.edit',$locat->id)}}">Edit</a>
+         <a class="btn btn-danger" href="{{Route('location.delete',$locat->id)}}">Delete</a>
+         </td>
+         
          
            
     @endforeach

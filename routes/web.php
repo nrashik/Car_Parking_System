@@ -9,6 +9,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoreyController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\Website\HomeController;
@@ -45,6 +46,11 @@ Route::get('/customer-profile',[ProfileController::class,'profile'])->name('prof
 
 
 Route::get('/Contact-Us',[HomeController::class,'contact'])->name('contactUs');
+Route::post('/Contact-store',[HomeController::class,'store'])->name('contactUs.store');
+Route::get('/Contact-list',[HomeController::class,'list'])->name('contactUs.list');
+Route::get('/Contact-delete/{id}',[HomeController::class,'delete'])->name('contactUs.delete');
+
+
 
 
 Route::get('/customer-registration',[CustomerController::class,'registration'])->name('customer.registration');
@@ -56,6 +62,9 @@ Route::post('/customer-ddologin',[CustomerController::class,'dologin'])->name('c
 
 
 Route::post('/review',[ReviewController::class,'review'])->name('review.store');
+Route::get('/review-list',[ReviewController::class,'list'])->name('review.list');
+Route::get('/review-delete',[ReviewController::class,'delete'])->name('review.delete');
+
 
 
 
@@ -66,7 +75,7 @@ Route::post('/review',[ReviewController::class,'review'])->name('review.store');
 Route::group(['middleware'=>'frontendAuth'],function(){
 
 Route::get('/customer-logout',[CustomerController::class,'logout'])->name('customer.logout');
-Route::get('/booking-form',[BookingController::class,'booking'])->name('booking');
+Route::get('/booking-form/{id}',[BookingController::class,'booking'])->name('booking');
 
 });
 
@@ -78,7 +87,7 @@ Route::get('/location-under-area/{id}',[LocationController::class,'areaWiseLocat
 
 
 
-Route::post('/booking-store',[BookingController::class,'store'])->name('booking.store');
+Route::post('/booking-store/{id}',[BookingController::class,'store'])->name('booking.store');
 
 
 
@@ -106,14 +115,34 @@ Route::get('/categorey',[CategoreyController::class,'categorey'])->name('categor
 Route::get('/create',[CategoreyController::class,'create'])->name('categorey.create');
 Route::post('/store',[CategoreyController::class,'store'])->name('categorey.store');
 
+
 Route::get('/ParkingArea_list',[AreaController::class,'list'])->name('area.list');
 Route::get('/new_area',[AreaController::class,'add'])->name('add.area');
 Route::post('/store_area',[AreaController::class,'store'])->name('area.store');
+Route::get('/area-edit/{id}',[AreaController::class,'edit'])->name('area.edit');
+Route::put('/area-update/{id}',[AreaController::class,'update'])->name('area.update');
+Route::get('/area-delete/{id}',[AreaController::class,'delete'])->name('area.delete');
+
+
+Route::get('/generate-report',[ReportController::class,'report'])->name('report');
+Route::get('/gsearch-report',[ReportController::class,'reportSearch'])->name('report.search');
 
 
 Route::get('/location_list',[LocationController::class,'list'])->name('location.list');
 Route::get('/add_location',[LocationController::class,'add'])->name('location.add');
 Route::post('/store_location',[LocationController::class,'store'])->name('location.store');
+Route::get('/add_edit/{id}',[LocationController::class,'edit'])->name('location.edit');
+Route::put('/add_update/{id}',[LocationController::class,'update'])->name('location.update');
+Route::get('/add-delete/{id}',[LocationController::class,'delete'])->name('location.delete');
+
+
+
+
+
+
+
+
+Route::get('/booking-list',[BookingController::class,'list'])->name('booking.list');
 
 
 Route::get('/vehicle',[VehicleController::class,'vehicle'])->name('vehicle.list');

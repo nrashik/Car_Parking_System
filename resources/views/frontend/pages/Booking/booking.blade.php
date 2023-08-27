@@ -76,35 +76,48 @@
   <p class="alert alert-success">{{session()->get('msg')}}</p>
   @endif
 
-  <form action="{{route('booking.store')}}" method="post">
+  <form action="{{route('booking.store',$location_id)}}" method="post">
     @csrf
     <h1>Booking Create Form</h1>
-    <label for="full_name">Full Name:</label>
-    <input type="text" id="full_name" name="name" required>
-
-    <label for="contact_number">Contact Number:</label>
-    <input type="text" id="contact_number" name="phone" required>
-
-    <label for="address">Address:</label>
-    <input type="text" id="address" name="address" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-   
-
-    <label for="status">Vehicle Model</label>
+    
+    <label for="status">Vehicle Information</label>
     <input value="" type="text" id="status" name="vehicle" required>
 
    
     
 
-    <label for="visit_date">Visit Date:</label>
-    <input type="date" id="visit_date" name="date" >
+    <label for="visit_date">parking Date:</label>
+    <input class="form-control" type="date" id="visit_date" name="date" >
     <br>
 
-    <label for="visit_time">Visit Time:</label>
-    <input type="time" id="visit_time" name="time" >
+    <label for="visit_time">From time</label>
+    <select class="form-control" name="time" id="">
+      <option value="8">8 AM</option>
+      <option value="9">9 AM</option>
+      <option value="10">10 AM</option>
+      <option value="11">11 AM</option>
+      <option value="12">12 AM</option>
+      <option value="13">1 PM</option>
+      <option value="14">2 PM</option>
+      <option value="15">3 PM</option>
+      <option value="16">4 PM</option>
+      <option value="17">5 PM</option>
+      <option value="18">6 PM</option>
+      <option value="19">7 PM</option>
+      <option value="20">8 PM</option>
+      <option value="21">9 PM</option>
+      <option value="22">10 PM</option>
+
+      
+    </select>
+
+
+    <label for="visit_date">Hour you need:</label>
+    <input class="form-control" type="number" id="hour" name="hour" >
+    <br>
+
+
+    
 <br>
     <label for="additional_comments">Additional Comments:</label>
     <textarea id="additional_comments" name="comment" rows="4" cols="50" required></textarea>

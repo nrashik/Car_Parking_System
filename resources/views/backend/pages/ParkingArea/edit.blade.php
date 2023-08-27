@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>New Parking Area</h1>
+<h1>Edit Parking Area</h1>
 
 
 <div class="containere">
@@ -11,20 +11,18 @@
             <div class="card p-3 mt-3">
                 <div class="card-header">
                     <div class="card-body">
-                        <form action="{{route('area.store')}}" method="post" enctype="multipart/form-data">
+                        <form action="{{Route('area.update',$areas->id)}}" method="post" enctype="multipart/form-data">
+                          @method('put')
                             @csrf
                           <div class="form-group">
                             <label for="exampleInputEmail1">Parking Location</label>
-                            <input type="String" name="area_location" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Location ">
+                            <input type="String" name="area_location" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$areas->area_name}}">
                             
                           </div>
 
-
-
-
                           <div class="form-group">
                             <label for="exampleInputEmail1">Parking Address</label>
-                            <input type="text" name="area_address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Address">
+                            <input type="text" name="area_address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$areas->area_address}}">
                             
                           </div>
                         <br>
