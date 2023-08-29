@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SlotControlller;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoreyController;
+use App\Http\Controllers\CustomerReportController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReportController;
@@ -38,11 +39,14 @@ Route::get('/customer-login',[CustomerController::class,'login'])->name('custome
 
 Route::get('/all-locations',[HomeController::class,'allLocation'])->name('all.location');
 
-
 Route::get('/search',[HomeController::class,'search'])->name('search');
 
 
 Route::get('/customer-profile',[ProfileController::class,'profile'])->name('profile');
+
+
+Route::get('/customer-report',[CustomerReportController::class,'report'])->name('customer.report');
+Route::get('/customer-search-report',[ReportController::class,'customerReportSearch'])->name('customer.search.report');
 
 
 Route::get('/Contact-Us',[HomeController::class,'contact'])->name('contactUs');
@@ -124,8 +128,13 @@ Route::put('/area-update/{id}',[AreaController::class,'update'])->name('area.upd
 Route::get('/area-delete/{id}',[AreaController::class,'delete'])->name('area.delete');
 
 
-Route::get('/generate-report',[ReportController::class,'report'])->name('report');
+Route::get('/report',[ReportController::class,'reportpage'])->name('report.page');
+
+
+
+Route::get('/generate-report',[ReportController::class,'totallBillReport'])->name('total.report');
 Route::get('/gsearch-report',[ReportController::class,'reportSearch'])->name('report.search');
+Route::get('/totallBillReport',[ReportController::class,'generalReport'])->name('general.report');
 
 
 Route::get('/location_list',[LocationController::class,'list'])->name('location.list');

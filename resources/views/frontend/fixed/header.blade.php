@@ -78,11 +78,37 @@
                             <a href="{{route('all.location')}}" class="nav-item nav-link">Parking Locations </a>
                         </div>
 
-                        <div class="nav-item dropdown">
+                        <!-- <div class="nav-item dropdown">
                             <a class="btn btn-custom" href="{{route('customer.login')}}">Login</a>
                             <a class="btn btn-custom" href="{{route('customer.logout')}}">Logout</a>
                             <a class="btn btn-custom" href="{{route('profile')}}">profile</a>
-                        </div>
+                        </div> -->
+
+                        @if (auth('customer')->user())
+             
+             <li class="dropdown">
+               <a class="btn btn-success" href="{{route('profile')}}">User Profile</a>
+               <!-- <ul class="dropdown-menu"> -->
+                 <li><a class="btn btn-danger" type="button" href="{{route('customer.logout')}}">
+                   <i class="fas fa-key"></i> Logout
+                 </a></li>                  
+                               
+               <!-- </ul>     -->
+             </li>
+             @else
+               
+             
+             <li>
+               <a type="button" class="btn btn-success" href="{{ route('customer.login') }}"><span>Login</span> 
+                 <i class="fas fa-user"></i>
+               </a>
+             </li>
+               
+             @endif
+
+
+
+
                     </div>
                 </nav>
             </div>

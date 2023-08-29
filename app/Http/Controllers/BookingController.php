@@ -35,7 +35,8 @@ class BookingController extends Controller
         // dd($request->all());
 
 
-        $checkBooking=Booking::where('date',$request->date)->where('start_time',$request->time)->first();
+        $checkBooking=Booking::where('date',$request->date)->where('start_time',$request->time)
+        ->where('slot',$request->slot)->first();
         if(!$checkBooking)
         {
             if($request->time+$request->hour < 22)
@@ -49,6 +50,7 @@ class BookingController extends Controller
                     'vehicle'=>$request->vehicle,
                     'date'=>$request->date,
                     'hour'=>$request->hour,
+                    'slot'=>$request->slot,
                     'start_time'=>$request->time,
                     'end_time'=>$request->time + $request->hour,
                     'comment'=>$request->comment

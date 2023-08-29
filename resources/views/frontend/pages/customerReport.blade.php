@@ -1,7 +1,6 @@
-@extends('backend.master')
+@extends('frontend.master')
 
 @section('content')
-
 
 <body>
     <div class="container mt-5">

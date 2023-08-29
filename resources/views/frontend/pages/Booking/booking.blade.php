@@ -112,6 +112,31 @@
     </select>
 
 
+    <label for="visit_time">Slot</label>
+    <select class="form-control" name="slot" id="">
+      <option value="A1">A1</option>
+      <option value="A2">A2</option>
+      <option value="A3">A3</option>
+      <option value="A4">A4</option>
+      <option value="B1">B1</option>
+      <option value="B2">B2</option>
+      <option value="B3">B3</option>
+      <option value="B4">B4</option>
+      <option value="C1">C1</option>
+      <option value="C2">C2</option>
+      <option value="C3">C3</option>
+      <option value="C4">c4</option>
+      <option value="D1">D1</option>
+      <option value="D2">D2</option>
+      <option value="D3">D3</option>
+      <option value="D4">D4</option>
+
+
+     
+
+      
+    </select>
+
     <label for="visit_date">Hour you need:</label>
     <input class="form-control" type="number" id="hour" name="hour" >
     <br>

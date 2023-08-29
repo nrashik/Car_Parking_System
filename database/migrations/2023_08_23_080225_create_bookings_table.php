@@ -19,8 +19,9 @@ class CreateBookingsTable extends Migration
             $table->string('date');
             $table->string('start_time');
             $table->string('end_time');
+            $table->string('slot');
             $table->string('hour');
-            $table->string('comment');
+            $table->string('comment')->nullable();
             $table->timestamps();
         });
     }

@@ -55,7 +55,7 @@ return redirect()->route('homepage')->with('msg','Registration success.');
         $credential=$request->except('_token');
 
         if(auth()->guard('customer')->attempt($credential)){
-            return redirect()->route('booking');
+            return redirect()->route('homepage');
         }else{
             return redirect()->route('dashboard');
         }

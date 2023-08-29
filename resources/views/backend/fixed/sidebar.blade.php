@@ -18,10 +18,10 @@
 
 
 
-                            <a class="nav-link" href="">
+                            <!-- <a class="nav-link" href="">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Customers
-                            </a>
+                            </a> -->
 
 
 
@@ -50,9 +50,9 @@
 
 
                             
-                            <a class="nav-link" href="{{route('report')}}">
+                            <a class="nav-link" href="{{route('report.page')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Report
+                                 Report
                             </a>
 
 

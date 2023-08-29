@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Website;
 use App\Http\Controllers\Controller;
 use App\Models\Locations;
 use App\Models\Contact;
+use App\Models\Area;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -28,6 +29,7 @@ class HomeController extends Controller
     public function allLocation()
     {
         $allLocation=Locations::all();
+        // $areaLocation=Area::with('area');
         return view('frontend.pages.allLocation',compact('allLocation'));
     }
 

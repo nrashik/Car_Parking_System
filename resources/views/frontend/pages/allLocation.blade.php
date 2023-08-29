@@ -12,14 +12,14 @@
     <p class="card-text"></p>
     
     <ul> 
-                                    <li><i class="far fa-check-circle"></i>Solts: </li>
-                                    <li><i class="far fa-check-circle"></i>Area:{{$location->}} </li>
+                                    <li><i class="far fa-check-circle"></i>Per hour Price : 50 Taka </li>
+                                    <li><i class="far fa-check-circle"></i>Area:{{$location->area_name}} </li>
                                     <li><i class="far fa-check-circle"></i>Address:{{$location->address}}</li>
                                     <li><i class="far fa-check-circle"></i>CC Camera: {{$location->cc_camera}}</li>
                                     <li><i class="far fa-check-circle"></i>Guard: {{$location->guard}}</li>
                                     <!-- <li><i class="far fa-check-circle"></i>Guard: {{$location->image}}</li> -->
                                 </ul>
-                                <a href="{{Route('booking')}}" class="btn btn-success">Book Now</a>
+                                <a href="{{Route('booking',$location->id)}}" class="btn btn-success">Book Now</a>
   </div>
 </div>
 @endforeach
