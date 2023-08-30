@@ -5,8 +5,9 @@
 <body>
     <div class="container mt-5">
       <h1>Select Date</h1>
-        <form action="{{Route('report.search')}}" method="get" >
-
+        <form action="{{Route('customer.search.report')}}" method="get" >
+            
+       
             @if ($errors->any())
             @foreach ($errors->all() as $error)
                 <div>
@@ -25,13 +26,15 @@
                     <input value="{{request()->end_date}}" type="date" class="form-control" id="end_date" name="end_date" required>
                 </div>
                 </div>
+                <input type="hidden" name="customer_id" value="{{auth('customer')->user()->id}}">
+
   
   
             <button type="submit" class="button">Generate Report</button>
         </form>
 
 <div class="container mt-5" id="printReport"> 
-    <h2 class="page-header">Report of  {{request()->start_date}}  to  {{request()->end_date}}</h2>
+    <h2 class="">Report of  {{request()->start_date}}  to  {{request()->end_date}}</h2>
     
     
     <br>

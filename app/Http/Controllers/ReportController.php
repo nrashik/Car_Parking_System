@@ -33,4 +33,6 @@ class ReportController extends Controller
         return view('backend.pages.report.generalReport');
     }
 
+    
+
 }

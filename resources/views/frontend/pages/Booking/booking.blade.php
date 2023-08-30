@@ -71,7 +71,6 @@
   </style>
 </head>
 <body> 
-
   @if(session()->has('msg'))
   <p class="alert alert-success">{{session()->get('msg')}}</p>
   @endif
@@ -91,6 +90,8 @@
     <br>
 
     <label for="visit_time">From time</label>
+    <!-- <input class="form-control" type="time" id="time" name="time" > -->
+
     <select class="form-control" name="time" id="">
       <option value="8">8 AM</option>
       <option value="9">9 AM</option>
@@ -140,6 +141,10 @@
     <label for="visit_date">Hour you need:</label>
     <input class="form-control" type="number" id="hour" name="hour" >
     <br>
+
+
+    <input type="hidden" name="customer_id" value="{{auth('customer')->user()->id}}">
+    
 
 
     

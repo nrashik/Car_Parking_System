@@ -46,7 +46,7 @@ Route::get('/customer-profile',[ProfileController::class,'profile'])->name('prof
 
 
 Route::get('/customer-report',[CustomerReportController::class,'report'])->name('customer.report');
-Route::get('/customer-search-report',[ReportController::class,'customerReportSearch'])->name('customer.search.report');
+Route::get('/customer-search-report',[CustomerReportController::class,'customerReport'])->name('customer.search.report');
 
 
 Route::get('/Contact-Us',[HomeController::class,'contact'])->name('contactUs');
